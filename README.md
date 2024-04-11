@@ -1,15 +1,6 @@
-Container básico para AED-I com as dependências básicas para desenvolver em C.
+## Aula 15 - Selection sort
 
-O template do projeto contém:
-
-- exemplo de estrutura de código contendo programa principal (`main.c`) e módulo (`lib.c` e `lib.h`)
-- exemplo de Makefile com as seguintes tarefas:
-  - `make all`: compilação do programa principal e do módulo
-  - `make lib`: compilação do módulo
-  - `make run`: execução do programa principal
-  - `make clean`: remoção dos arquivos objeto e do programa principal
-
-Para rodar o projeto em ambiente virtualizado (Codespace) você deve:
-- logar no GitHub com sua conta
-- para criar uma máquina virtual com o ambiente de desenvolvimento, clique no botão "Code" e depois em "Open with Codespaces"
-- posteriormente, você pode exportar as mudanças da máquina virtual para um fork na sua conta
+* `selection_sort.h`: Interface da função de ordenação selection sort.
+* `selection_sort.c`: Implementação da função de ordenação selection sort.
+* `main.c`: Programa principal para testar a função de ordenação selection sort.
+* `element.h` e `element.c`: Definição e implementação de funções auxiliares para manipular elementos de um vetor.

@@ -1,21 +1,13 @@
 CC = gcc -Wall -pedantic
-BUILD = build
-OBJ = $(BUILD)/lib.o
-MAIN = main.c
-LIB = lib.c
-EXE = $(BUILD)/main
 
-all: lib
-	$(CC) -o $(EXE) $(OBJ) $(MAIN)
+build_dir:
+	mkdir -p build
 
-build:
-	mkdir -p $(BUILD)
+element: build_dir
+	$(CC) -c element.c -o build/element.o
 
-lib: build
-	$(CC) -c -o $(OBJ) $(LIB)
+selection_sort: build_dir
+	$(CC) -c selection_sort.c -o build/selection_sort.o
 
-clean:
-	rm -rf $(BUILD)
-
-run:
-	./$(EXE)
+main: element selection_sort
+	$(CC) build/element.o build/selection_sort.o main.c -o build/main
